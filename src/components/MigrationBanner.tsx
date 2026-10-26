@@ -60,7 +60,7 @@ export const MigrationBanner: React.FC = () => {
               <div className="rounded-3xl overflow-hidden shadow-xl border border-rose-200/80 bg-white p-3">
                 <div className="relative rounded-2xl overflow-hidden">
                   <img
-                    src="/src/assets/images/migration_portal_stairs_1792846396502.jpg"
+                    src="./images/migration_portal_stairs_1792846396502.jpg"
                     alt="فرایند مهاجرت آسان به توتینو"
                     className="w-full h-auto aspect-[4/3] object-cover"
                     referrerPolicy="no-referrer"

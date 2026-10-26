@@ -46,7 +46,7 @@ export const BottomCta: React.FC = () => {
           <div className="lg:col-span-5 flex justify-center">
             <div className="rounded-2xl overflow-hidden shadow-lg border border-rose-200/60 max-w-md w-full bg-white">
               <img
-                src="/src/assets/images/racing_track_finish_1792846395707.jpg"
+                src="./images/racing_track_finish_1792846395707.jpg"
                 alt="مسیر پیروزی و سرعت وب‌سایت با توتینو"
                 className="w-full h-auto aspect-[16/9] object-cover"
                 referrerPolicy="no-referrer"

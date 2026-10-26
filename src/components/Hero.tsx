@@ -106,7 +106,7 @@ export const Hero: React.FC = () => {
               
               <div className="relative bg-white rounded-3xl p-3 shadow-2xl border border-rose-100 overflow-hidden">
                 <img
-                  src="/src/assets/images/hero_tutino_hosting_1792918746953.jpg"
+                  src="./images/hero_tutino_hosting_1792918746953.jpg"
                   alt="میزبانی ابری توتینو - سرورهای پرسرعت با معماری مدرن"
                   className="w-full h-auto rounded-2xl object-cover aspect-[4/3]"
                   referrerPolicy="no-referrer"

@@ -67,24 +67,32 @@ export const LiveChatWidget: React.FC = () => {
   };
 
   return (
-    <div className="fixed bottom-6 left-6 z-50">
+    <div className="fixed bottom-5 left-5 z-50">
       
-      {/* Floating Toggle Bubble */}
+      {/* Floating Toggle Bubble - LTR container so button is at leftmost and badge extends inwards */}
       {!isOpen && (
-        <div className="flex items-center gap-3">
-          {/* Subtle invitation chip */}
-          <div className="hidden sm:flex bg-white px-3.5 py-2 rounded-2xl shadow-lg border border-slate-200 text-xs text-slate-800 font-medium animate-bounce duration-1000 items-center gap-2">
-            <span>سوالی دارید؟ پشتیبان آنلاین توتینو آماده‌ست</span>
-            <span>🍓</span>
-          </div>
-
+        <div className="flex items-center gap-2.5" dir="ltr">
+          {/* Berry Button */}
           <button
             onClick={() => setIsOpen(true)}
-            className="w-14 h-14 rounded-full bg-rose-600 hover:bg-rose-500 text-white flex items-center justify-center shadow-xl shadow-rose-500/30 transition-transform hover:scale-105 active:scale-95 group"
+            className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-rose-600 hover:bg-rose-500 text-white flex items-center justify-center shadow-lg shadow-rose-600/30 transition-transform hover:scale-105 active:scale-95 group shrink-0 relative z-20 cursor-pointer"
             aria-label="گفتگوی آنلاین با پشتیبانی توتینو"
+            title="پشتیبانی آنلاین توتینو"
           >
-            <BerryLogo size={28} className="group-hover:rotate-12 transition-transform drop-shadow" />
+            <BerryLogo size={22} className="group-hover:rotate-12 transition-transform drop-shadow" />
+            <span className="absolute -top-0.5 -right-0.5 w-3 h-3 rounded-full bg-emerald-500 border-2 border-white shadow-xs"></span>
           </button>
+
+          {/* Invitation chip - extends to the right (into the page), never behind the button */}
+          <div
+            onClick={() => setIsOpen(true)}
+            className="bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full shadow-md border border-rose-100 hover:border-rose-300 text-xs text-slate-800 font-semibold cursor-pointer transition-all hover:bg-white hover:shadow-lg flex items-center gap-2 select-none relative z-10 animate-pulse duration-1000"
+            dir="rtl"
+          >
+            <span className="w-2 h-2 rounded-full bg-emerald-500 shrink-0"></span>
+            <span className="text-[11px] sm:text-xs">پشتیبانی آنلاین ۲۴/۷ توتینو</span>
+            <span className="text-xs">🍓</span>
+          </div>
         </div>
       )}
 

@@ -81,7 +81,7 @@ export const SupportSection: React.FC = () => {
                 
                 <div className="relative rounded-2xl overflow-hidden border border-rose-500/30 mb-5">
                   <img
-                    src="/src/assets/images/support_expert_portrait_1792846396051.jpg"
+                    src="./images/support_expert_portrait_1792846396051.jpg"
                     alt="مهندس پشتیبانی توتینو"
                     className="w-full h-auto aspect-square object-cover"
                     referrerPolicy="no-referrer"

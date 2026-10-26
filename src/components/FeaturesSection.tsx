@@ -51,7 +51,7 @@ export const FeaturesSection: React.FC = () => {
           <div className="lg:col-span-5 flex justify-center">
             <div className="relative rounded-3xl overflow-hidden shadow-lg border border-rose-100 bg-rose-50/40 max-w-md w-full">
               <img
-                src="/src/assets/images/features_tutino_cloud_1792918748587.jpg"
+                src="./images/features_tutino_cloud_1792918748587.jpg"
                 alt="ترازوی تعادل امنیت و پایداری ابری توتینو"
                 className="w-full h-auto aspect-[4/3] object-cover"
                 referrerPolicy="no-referrer"

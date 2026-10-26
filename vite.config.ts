@@ -5,6 +5,9 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
+    // Relative base ensures assets load correctly on GitHub Pages (sub-paths),
+    // custom domains, Vercel, Netlify, or any static hosting without 404 white screens.
+    base: './',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
