@@ -69,31 +69,34 @@ export const LiveChatWidget: React.FC = () => {
   return (
     <div className="fixed bottom-5 left-5 z-50">
       
-      {/* Floating Toggle Bubble - LTR container so button is at leftmost and badge extends inwards */}
+      {/* Floating Support Button - Unified compact capsule so text and strawberry never overlap */}
       {!isOpen && (
-        <div className="flex items-center gap-2.5" dir="ltr">
-          {/* Berry Button */}
-          <button
-            onClick={() => setIsOpen(true)}
-            className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-rose-600 hover:bg-rose-500 text-white flex items-center justify-center shadow-lg shadow-rose-600/30 transition-transform hover:scale-105 active:scale-95 group shrink-0 relative z-20 cursor-pointer"
-            aria-label="گفتگوی آنلاین با پشتیبانی توتینو"
-            title="پشتیبانی آنلاین توتینو"
-          >
-            <BerryLogo size={22} className="group-hover:rotate-12 transition-transform drop-shadow" />
-            <span className="absolute -top-0.5 -right-0.5 w-3 h-3 rounded-full bg-emerald-500 border-2 border-white shadow-xs"></span>
-          </button>
-
-          {/* Invitation chip - extends to the right (into the page), never behind the button */}
-          <div
-            onClick={() => setIsOpen(true)}
-            className="bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full shadow-md border border-rose-100 hover:border-rose-300 text-xs text-slate-800 font-semibold cursor-pointer transition-all hover:bg-white hover:shadow-lg flex items-center gap-2 select-none relative z-10 animate-pulse duration-1000"
-            dir="rtl"
-          >
-            <span className="w-2 h-2 rounded-full bg-emerald-500 shrink-0"></span>
-            <span className="text-[11px] sm:text-xs">پشتیبانی آنلاین ۲۴/۷ توتینو</span>
-            <span className="text-xs">🍓</span>
+        <button
+          onClick={() => setIsOpen(true)}
+          className="group flex items-center gap-2.5 bg-white hover:bg-rose-50/60 text-slate-800 hover:text-rose-700 pl-4 pr-2.5 py-2 rounded-full shadow-lg hover:shadow-xl border border-rose-200/90 transition-all hover:scale-105 active:scale-95 cursor-pointer select-none"
+          dir="rtl"
+          aria-label="پشتیبانی آنلاین توتینو"
+          title="پشتیبانی آنلاین ۲۴/۷ توتینو"
+        >
+          {/* Small compact strawberry badge */}
+          <div className="w-7 h-7 rounded-full bg-rose-600 flex items-center justify-center text-white shadow-xs group-hover:rotate-12 transition-transform shrink-0 relative">
+            <BerryLogo size={16} />
+            <span className="absolute -top-0.5 -right-0.5 w-2 h-2 rounded-full bg-emerald-400 border border-white"></span>
           </div>
-        </div>
+
+          {/* Clear support text */}
+          <div className="flex flex-col text-right leading-tight">
+            <span className="text-xs font-bold text-slate-900 group-hover:text-rose-600 transition-colors">
+              پشتیبانی آنلاین توتینو
+            </span>
+            <span className="text-[10px] text-emerald-600 font-semibold flex items-center gap-1">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+              پاسخگویی سریع ۲۴/۷
+            </span>
+          </div>
+
+          <MessageSquare className="w-4 h-4 text-rose-500 mr-1 shrink-0" />
+        </button>
       )}
 
       {/* Chat Window */}

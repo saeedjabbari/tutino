@@ -5,9 +5,12 @@ interface BerryIconProps {
   size?: number;
 }
 
-export const BerryLogo: React.FC<BerryIconProps> = ({ className = 'w-9 h-9' }) => {
+export const BerryLogo: React.FC<BerryIconProps> = ({ className = '', size }) => {
+  const sizeStyle = size ? { width: `${size}px`, height: `${size}px`, minWidth: `${size}px`, minHeight: `${size}px` } : undefined;
+  const defaultSizeClass = !size && !className.includes('w-') && !className.includes('h-') ? 'w-9 h-9' : '';
+
   return (
-    <div className={`relative flex items-center justify-center shrink-0 ${className}`}>
+    <div style={sizeStyle} className={`relative flex items-center justify-center shrink-0 ${defaultSizeClass} ${className}`}>
       <svg viewBox="0 0 40 40" className="w-full h-full drop-shadow-sm" fill="none" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <linearGradient id="berryGradient" x1="6" y1="10" x2="34" y2="36" gradientUnits="userSpaceOnUse">
